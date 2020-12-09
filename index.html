@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Encuesta</title>
+
+		<link rel="icon" type="image/x-icon" href="https://efecty.com.co/web/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+		<link rel="stylesheet" href="css/css.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="section" style="display: block">
+                <button class="btn blue" id="dolar">Test</button>
+                <button class="btn red" onclick="obtenerDatos('uf')">Test</button>
+                <button class="btn red" onclick="createInteraction()">Create interaction</button>
+                <button class="btn green" onclick="createAnswer('1','5','10b5e814-d2db-4b1d-bf58-38874f60c65a', 'ABANDONED')">Res 1</button>
+				<button class="btn yellow" onclick="move(33,1)">Bar1</button>
+				<button class="btn yellow" onclick="move(66,33)">Bar2</button>
+            </div>
+			
+			<div class="section" style="margin-top: 30px">
+                <img src="assets/images/logo-efecty.svg">
+            </div>
+			
+			<div class="section">
+                <h3>Encuesta Efecty&nbsp;</h3>
+            </div>
+			
+			<div id="p1" >
+				<h5><span style="font-size: 40px">1.</span> ¿Qué tan probable es que recomiendes a Efecty a un amigo, colega o familiar?</h5>
+				<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p1', 'p2')" id="s1_r1" >
+				<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p1', 'p2')" id="s1_r2" >
+				<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p1', 'p2')" id="s1_r3" >
+				<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p1', 'p2')" id="s1_r4" >
+			 	<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p1', 'p2')" id="s1_r5" >
+            </div>
+			
+			<div id="p2" style="display: none">
+					<h5><span style="font-size: 40px">2.</span> ¿Qué tan satisfecho te encuentras con la asesoría brindada?</h5>
+					<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p2', 'p3')" id="s2_r1" >
+					<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p2', 'p3')" id="s2_r2" >
+					<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p2', 'p3')" id="s2_r3" >
+					<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p2', 'p3')" id="s2_r4" >
+					<img src="assets/icons/icon_star_out.png" onclick="iniciar(this, 'p2', 'p3')" id="s2_r5" >
+            </div>
+			
+			<div id="p3" style="display: none;">
+					<h5><span style="font-size: 40px">3.</span> ¿La asesoría brindada por nuestros asesores logró solucionar tu solicitud?</h5>
+					<img src="assets/icons/icon_hand_good_out.png" onclick="iniciar(this, 'p3', 'end')" id="h_g_r1" >
+					<img src="assets/icons/icon_hand_bad_out.png" onclick="iniciar(this, 'p3', 'end')" id="h_b_r1" >
+		    </div>
+			
+			<div id="end" style="display: none">
+				<h3>Muchas gracias por su tiempo y respuestas.</h3>
+				<h4>Hasta pronto.</h4>
+		    </div>
+			
+			<div id="myProgress">
+				<div id="myBar"></div>
+			</div>
+
+            <div class="section">
+                <ul id="resultado"></ul>
+            </div>
+        </div>
+
+		<script src="js/local.js"></script>
+        <script src="js/services.js"></script>
+		<script src="js/starsEvent.js"></script>
+		<script src="js/handEvent.js"></script>
+		<script src="js/progressBarEvent.js"></script>
+		<script src="js/actions.js"></script>
+    </body>
+</html>
+
